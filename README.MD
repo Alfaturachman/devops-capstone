@@ -201,10 +201,4 @@ For peer evaluators reviewing the manual track, use the checklist below to easil
 
 ---
 
-## Author(s)
-
-- **Nikesh Kumar** — _Lead Developer & DevOps Engineer_
-
----
-
-_Thank you for reviewing this Capstone Project! If you find it helpful, please consider giving it a star!_
+\_Thank you for reviewing this Capstone Project\_
