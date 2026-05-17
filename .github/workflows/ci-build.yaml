@@ -1,0 +1,39 @@
+name: CI Build
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    name: Continuous Integration Checks
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        cache: 'pip'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Lint with Flake8
+      run: |
+        flake8 service tests
+
+    - name: Lint with Pylint
+      run: |
+        pylint service tests
+
+    - name: Run Unit Tests with Nosetests
+      run: |
+        nosetests --with-coverage --cover-package=service
