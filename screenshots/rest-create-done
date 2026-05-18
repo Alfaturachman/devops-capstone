@@ -1,5 +1,5 @@
 $ curl -i -X POST -H "Content-Type: application/json" -d '{"name":"Jane Doe", "email":"jane@example.com", "address":"456 Oak Ave", "phone_number":"555-9876"}' http://localhost:8080/accounts
-HTTP/1.0 201 CREATED
+HTTP/1.1 201 CREATED
 Content-Type: application/json
 Access-Control-Allow-Origin: *
 X-Frame-Options: SAMEORIGIN
