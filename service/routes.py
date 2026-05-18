@@ -18,7 +18,7 @@ def index():
     return jsonify({
         "name": "Customer Accounts Microservice",
         "description": "An enterprise-grade RESTful microservice for managing customer accounts.",
-        "version": "1.0.0",
+        "version": "1.0",
         "endpoints": {
             "list_accounts": "GET /accounts",
             "create_account": "POST /accounts",

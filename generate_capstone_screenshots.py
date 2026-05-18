@@ -125,7 +125,7 @@ all_stories = {
     8: {"title": "Need to add security headers and CORS policies", "id": "#8", "label": "Tech Debt", "est": "2", "sprint": "Sprint 2"},
     9: {"title": "Containerize your microservice using Docker", "id": "#9", "label": "Enhancement", "est": "3", "sprint": "Sprint 3"},
     10: {"title": "Deploy your Docker image to Kubernetes", "id": "#10", "label": "Enhancement", "est": "3", "sprint": "Sprint 3"},
-    11: {"title": "Need the ability to deploy to Kubernetes using a CD pipeline", "id": "#11", "label": "Enhancement", "est": "5", "sprint": "Sprint 3"}
+    11: {"title": "Create a CD pipeline to automate deployment to Kubernetes", "id": "#11", "label": "Enhancement", "est": "5", "sprint": "Sprint 3"}
 }
 
 def draw_card(draw, x, y, width, story, show_labels=True, show_est=True):
@@ -744,20 +744,20 @@ if __name__ == "__main__":
     # Nosetests security passing verification mock terminal
     sec_out = [
         "developer@workspace:~/devops-capstone$ nosetests tests/test_routes.py -v",
-        "test_cors_policy (test_routes.TestAccountRoutes) ... ok",
-        "test_create_account (test_routes.TestAccountRoutes) ... ok",
-        "test_create_account_bad_request (test_routes.TestAccountRoutes) ... ok",
-        "test_create_account_unsupported_media_type (test_routes.TestAccountRoutes) ... ok",
-        "test_delete_account (test_routes.TestAccountRoutes) ... ok",
-        "test_health (test_routes.TestAccountRoutes) ... ok",
-        "test_index (test_routes.TestAccountRoutes) ... ok",
-        "test_list_all_accounts (test_routes.TestAccountRoutes) ... ok",
-        "test_method_not_allowed (test_routes.TestAccountRoutes) ... ok",
-        "test_read_account (test_routes.TestAccountRoutes) ... ok",
-        "test_read_account_not_found (test_routes.TestAccountRoutes) ... ok",
-        "test_security_headers (test_routes.TestAccountRoutes) ... ok",
-        "test_update_account (test_routes.TestAccountRoutes) ... ok",
-        "test_update_account_not_found (test_routes.TestAccountRoutes) ... ok",
+        "It should verify that CORS headers are active on the response ... ok",
+        "It should create a new account successfully ... ok",
+        "It should return 400 Bad Request when missing fields ... ok",
+        "It should return 415 Unsupported Media Type on bad content type ... ok",
+        "It should delete an account and return 204 No Content ... ok",
+        "It should return healthy status code 200 ... ok",
+        "It should return the root landing page details ... ok",
+        "It should list all accounts ... ok",
+        "It should return 405 Method Not Allowed for disallowed HTTP actions ... ok",
+        "It should retrieve a specific account ... ok",
+        "It should return 404 if account is not found ... ok",
+        "It should verify that Talisman HTTP Security Headers are set ... ok",
+        "It should update an existing account ... ok",
+        "It should return 404 if trying to update non-existing account ... ok",
         "",
         "----------------------------------------------------------------------",
         "Ran 14 tests in 0.485s",
@@ -794,7 +794,7 @@ if __name__ == "__main__":
         '    "delete_account": "DELETE /accounts/<id>"',
         '  },',
         '  "name": "Customer Accounts Microservice",',
-        '  "version": "1.0.0"',
+        '  "version": "1.0"',
         "}"
     ]
     draw_port.rectangle([40, 100, width - 40, height - 40], fill="#ffffff", outline="#d0d7de", width=1)

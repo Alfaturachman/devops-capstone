@@ -34,9 +34,8 @@ COPY requirements.txt .
 # Ensure appuser's local bin is in PATH
 ENV PATH=/home/appuser/.local/bin:$PATH
 
-# Copy the microservice source code and entry points
-COPY service/ service/
-COPY wsgi.py .
+# Copy all application files to the container
+COPY . .
 
 # Change ownership of working directory to the non-root user
 RUN chown -R appuser:appgroup /app
@@ -52,4 +51,4 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
 # Start the application using Gunicorn for production scalability
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "--workers", "3", "wsgi:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "wsgi:app"]
