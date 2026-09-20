@@ -1,6 +1,5 @@
 # Customer Accounts Microservice — IBM DevOps Capstone Project
 
-[![Build Status](https://github.com/nikeshkumar/devops-capstone/actions/workflows/ci-build.yaml/badge.svg)](https://github.com/nikeshkumar/devops-capstone/actions/workflows/ci-build.yaml)
 [![Python Version](https://img.shields.io/badge/python-3.9%20%7C%203.10-blue.svg)](https://www.python.org/)
 [![Framework](https://img.shields.io/badge/framework-Flask-red.svg)](https://flask.palletsprojects.com/)
 [![Docker](https://img.shields.io/badge/container-Docker-blue.svg)](https://www.docker.com/)
