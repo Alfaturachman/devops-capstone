@@ -197,7 +197,3 @@ For peer evaluators reviewing the manual track, use the checklist below to easil
 - [ ] **Task 5 b**: `cd-pipeline-done.jpg` — CD pipeline automation story moved to _Done_. (1 pt)
 
 </details>
-
----
-
-\_Thank you for reviewing this Capstone Project\_
